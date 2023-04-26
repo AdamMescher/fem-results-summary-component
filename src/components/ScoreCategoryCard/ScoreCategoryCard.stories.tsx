@@ -26,6 +26,6 @@ export const Variants: Story = {
   },
   render: (args: any) =>
     <div>
-      {categorgies.map(category => <ScoreCategoryCard category={category} icon={`/assets/icons/icon-${category}.svg`} {...args} />)}
+      {categorgies.map(category => <ScoreCategoryCard key={category} category={category} icon={`/assets/icons/icon-${category}.svg`} {...args} />)}
     </div>,
 };
