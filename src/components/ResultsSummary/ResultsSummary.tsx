@@ -3,8 +3,10 @@ import ScoreCategoryCard from '../ScoreCategoryCard';
 import Button from '../Button';
 import styles from './ResultsSummary.module.scss';
 
+type Category = 'reaction' | 'memory' | 'verbal' | 'visual';
+
 interface Score {
-  category: 'reaction' | 'memory' | 'verbal' | 'visual';
+  category: Category;
   score: number;
   icon: string;
 }

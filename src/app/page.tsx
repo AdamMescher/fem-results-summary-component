@@ -2,7 +2,15 @@ import * as React from 'react';
 import ResultsSummary from '@/components/ResultsSummary';
 import styles from './styles/HomePage.module.scss';
 
-const data = [
+type Category = 'reaction' | 'memory' | 'verbal' | 'visual';
+
+interface Score {
+  category: Category;
+  score: number;
+  icon: string;
+}
+
+const data: Score[] = [
   {
     category: 'reaction',
     score: 80,
