@@ -1,3 +1,7 @@
+function toKebabCase(str) {
+  return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+}
+
 const generateComponentIndexTemplate = (componentName) => {
   const template = `
   export { default } from './${componentName}';
@@ -15,7 +19,7 @@ const generateComponentTemplate = (componentName) => {
   
   const ${componentName} = ({}: ${componentName}Props) => {
     return (
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} data-testid=${toKebabCase(componentName)}>
         ${componentName}
       </div>
     );
@@ -85,16 +89,19 @@ const generateComponentUnitTestsTemplate = (componentName) => {
 
   expect.extend(toHaveNoViolations);
 
-  describe("App Component", () => {
-    it("Should Render without errors", () => {
+  describe("${componentName} Component", () => {
+    it("Should render without errors", () => {
       render(<${componentName} />);
       
-      expect(screen.getByRole('${componentName}')).toBeInTheDocument();
+      expect(screen.getByTestId('${toKebabCase(
+        componentName
+      )}')).toBeInTheDocument();
     });
     it("Should render without Axe Core A11Y errors", async () => {
-      render(<${componentName} />);
-
-      expect(await axe(render(<${componentName} />)).toHaveNoViolations();
+      const { container } = render(<${componentName} />);
+      const results = await axe(container);
+  
+      expect(results).toHaveNoViolations();
     });
   });
   `;

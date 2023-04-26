@@ -13,9 +13,9 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "npx playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build -s public",
+    "build-storybook": "storybook build -s ./public",
     "serve-storybook": "serve storybook-static",
-    "chromatic": "npx chromatic --project-token=9a341be0897e"
+    "chromatic": "npx chromatic --project-token="
   },
   "dependencies": {
     "@axe-core/playwright": "^4.6.1",
@@ -38,6 +38,7 @@
     "@storybook/addon-interactions": "^7.0.4",
     "@storybook/addon-links": "^7.0.4",
     "@storybook/addon-mdx-gfm": "^7.0.4",
+    "@storybook/addon-styling": "^1.0.3",
     "@storybook/blocks": "^7.0.4",
     "@storybook/nextjs": "^7.0.4",
     "@storybook/react": "^7.0.4",
@@ -52,7 +53,7 @@
     "global-jsdom": "^8.8.0",
     "jest-axe": "^7.0.1",
     "jsdom": "^21.1.1",
-    "sass": "^1.62.0",
+    "sass": "^1.62.1",
     "storybook": "^7.0.4",
     "vitest": "^0.30.1"
   },

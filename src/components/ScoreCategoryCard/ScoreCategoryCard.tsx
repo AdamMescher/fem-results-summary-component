@@ -12,12 +12,13 @@ const ScoreCategoryCard = ({ category, score }: ScoreCategoryCard) => {
   const iconWidth = 20;
 
   return (
-    <div className={`${styles.wrapper} ${styles[category]}`}>
+    <article className={`${styles.wrapper} ${styles[category]}`}>
       <div className={styles.category}>
         <Image
           src={`/assets/icons/icon-${category}.svg`}
           height={iconHeight}
           width={iconWidth}
+          alt={`${category} icon`}
         />
         <p>{category.charAt(0).toUpperCase() + category.slice(1)}</p>
       </div>
@@ -25,7 +26,7 @@ const ScoreCategoryCard = ({ category, score }: ScoreCategoryCard) => {
         {score}
         <span>/ 100</span>
       </p>
-    </div>
+    </article>
   );
 };
 

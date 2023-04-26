@@ -10,6 +10,9 @@ export default {
 type Story = StoryObj<typeof ScoreCategoryCard>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    category: 'reaction',
+    score: 50,
+  },
   render: (args: any) => <ScoreCategoryCard {...args} />,
 };

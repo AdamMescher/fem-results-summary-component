@@ -25,7 +25,7 @@ const meanOfScores = (scores: Score[]) => {
 
 const ResultsSummary = ({ scores }: ResultsSummaryProps) => {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} data-testid="results-summary">
       <div className={styles['score-display-container']}>
         <h3 className={styles['score-display-header']}>Your Result</h3>
         <div className={styles['score-display']}>
