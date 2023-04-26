@@ -44,9 +44,10 @@ const ResultsSummary = ({ scores }: ResultsSummaryProps) => {
         <div className={styles['score-summary-cards']}>
           {scores.map((score) => (
             <ScoreCategoryCard
-              key={score.category.toLowerCase()}
-              category={score.category.toLowerCase()}
+              key={score.category}
+              category={score.category}
               score={score.score}
+              icon={`/assets/icons/icon-${score.category}.svg`}
             />
           ))}
         </div>

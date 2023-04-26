@@ -366,4 +366,6 @@
    * - 21: White on black or black on white.
    */
   // "terminal.integrated.minimumContrastRatio": 4.5
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

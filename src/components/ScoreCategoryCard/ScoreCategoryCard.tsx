@@ -5,9 +5,10 @@ import styles from './ScoreCategoryCard.module.scss';
 interface ScoreCategoryCard {
   category: 'reaction' | 'memory' | 'verbal' | 'visual';
   score: number;
+  icon: string;
 }
 
-const ScoreCategoryCard = ({ category, score }: ScoreCategoryCard) => {
+const ScoreCategoryCard = ({ category, score, icon }: ScoreCategoryCard) => {
   const iconHeight = 20;
   const iconWidth = 20;
 
@@ -15,7 +16,7 @@ const ScoreCategoryCard = ({ category, score }: ScoreCategoryCard) => {
     <article className={`${styles.wrapper} ${styles[category]}`}>
       <div className={styles.category}>
         <Image
-          src={`/assets/icons/icon-${category}.svg`}
+          src={icon}
           height={iconHeight}
           width={iconWidth}
           alt={`${category} icon`}

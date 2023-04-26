@@ -4,24 +4,24 @@ import styles from './styles/HomePage.module.scss';
 
 const data = [
   {
-    category: 'Reaction',
+    category: 'reaction',
     score: 80,
-    icon: './assets/images/icon-reaction.svg',
+    icon: './assets/icons/icon-reaction.svg',
   },
   {
-    category: 'Memory',
+    category: 'memory',
     score: 92,
-    icon: './assets/images/icon-memory.svg',
+    icon: './assets/icons/icon-memory.svg',
   },
   {
-    category: 'Verbal',
+    category: 'verbal',
     score: 61,
-    icon: './assets/images/icon-verbal.svg',
+    icon: './assets/icons/icon-verbal.svg',
   },
   {
-    category: 'Visual',
+    category: 'visual',
     score: 72,
-    icon: './assets/images/icon-visual.svg',
+    icon: './assets/icons/icon-visual.svg',
   },
 ];
 

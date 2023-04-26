@@ -1,3 +1,4 @@
+import * as React from 'react';
 import type { Preview } from '@storybook/react';
 import '../src/app/styles/globals.scss';
 
