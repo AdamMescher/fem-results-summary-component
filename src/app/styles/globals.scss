@@ -1,0 +1,126 @@
+@use './typography.scss';
+@use 'sass:color';
+
+:root {
+  --layout-breakpoint-mobile: 375px;
+  --layout-breakpoint-desktop: 1440px;
+
+  --color-primary-light-red: hsl(0, 100%, 67%);
+  --color-primary-light-red-hsl: 0, 100%, 67%;
+  --color-primary-orangey-yellow: hsl(39, 100%, 56%);
+  --color-primary-orangey-yellow-hsl: 39, 100%, 56%;
+  --color-primary-green-teal: hsl(166, 100%, 37%);
+  --color-primary-green-teal-hsl: 166, 100%, 37%;
+  --color-primary-cobalt-blue: hsl(234, 85%, 45%);
+  --color-primary-cobalt-blue-hsl: 234, 85%, 45%;
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-white-hsl: 0, 0%, 100%;
+  --color-neutral-pale-blue: hsl(221, 100%, 96%);
+  --color-neutral-pale-blue-hsl: 221, 100%, 96%;
+  --color-neutral-light-lavender: hsl(241, 100%, 89%);
+  --color-neutral-light-lavender-hsl: 241, 100%, 89%;
+  --color-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+  --color-neutral-dark-gray-blue-hsl: 224, 30%, 27%;
+
+  --effect-gradient-one: linear-gradient(
+    180deg,
+    #4d21c9 0%,
+    rgba(37, 33, 201, 0) 100%,
+    rgba(37, 33, 201, 0) 100%
+  );
+  --effect-gradient-two: linear-gradient(
+    180deg,
+    #7755ff 0%,
+    #6943ff 0.01%,
+    #2f2ce9 100%
+  );
+
+  --effect-shadow-one: 0px 30px 60px rgba(61, 108, 236, 0.15);
+
+  --typography-font-family-hanken-grotesk: "'Hanken Grotesk', sans-serif";
+  --typography-font-size-body: 18px;
+  --typography-font-weight-medium: 500;
+  --typography-font-weight-bold: 700;
+  --typography-font-weight-extra-bold: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+html {
+  min-height: 100%;
+  height: 100vh;
+  width: 100%;
+}

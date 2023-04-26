@@ -1,0 +1,49 @@
+@use 'sass:color';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding-inline: 16px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  padding-block: 18px;
+}
+
+.category p {
+  padding-inline-start: 12px;
+}
+
+.result {
+  color: var(--color-neutral-dark-gray-blue);
+  font-weight: var(--typography-font-weight-bold);
+}
+
+.result span {
+  padding-inline-start: 8px;
+  color: hsl(var(--color-neutral-dark-gray-blue-hsl), 0.5);
+}
+
+.reaction {
+  color: var(--color-primary-light-red);
+  background-color: hsl(var(--color-primary-light-red-hsl), 0.05);
+}
+
+.memory {
+  color: var(--color-primary-orangey-yellow);
+  background-color: hsl(var(--color-primary-orangey-yellow-hsl), 0.05);
+}
+
+.verbal {
+  color: var(--color-primary-green-teal);
+  background-color: hsl(var(--color-primary-green-teal-hsl), 0.05);
+}
+
+.visual {
+  color: var(--color-primary-cobalt-blue);
+  background-color: hsl(var(--color-primary-cobalt-blue-hsl), 0.05);
+}
